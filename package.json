@@ -1,0 +1,23 @@
+{
+  "name": "give-to-memorize",
+  "version": "1.0.0",
+  "description": "Discord Bot program to assist with memorization.",
+  "main": "index.js",
+  "scripts": {
+    "start": "start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kotoHa-cloud/give-to-memorize.git"
+  },
+  "author": "sum1n_o and tach1b4nq",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/kotoHa-cloud/give-to-memorize/issues"
+  },
+  "homepage": "https://github.com/kotoHa-cloud/give-to-memorize#readme",
+  "dependencies": {
+    "discord.js": "^14.14.1"
+  }
+}
