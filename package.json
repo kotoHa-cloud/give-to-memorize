@@ -4,7 +4,7 @@
   "description": "Discord Bot program to assist with memorization.",
   "main": "index.js",
   "scripts": {
-    "start": "start",
+    "start": "npx nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
