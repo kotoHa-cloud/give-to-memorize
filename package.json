@@ -19,6 +19,7 @@
   "homepage": "https://github.com/kotoHa-cloud/give-to-memorize#readme",
   "dependencies": {
     "discord.js": "^14.14.1",
+    "node-cron": "^3.0.3",
     "nodemon": "^3.0.2"
   }
 }
