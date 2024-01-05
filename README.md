@@ -1,7 +1,11 @@
 # Bots to aid your memory.
 > It was created for a contest sponsored by Kyushu Central Rehabilitation Institute.
-> If you would like to read READEME.md in Japanese, you should move [README_JA.md](./README_JA.md)
-> 
+> If you would like to read READEME.md in Japanese, you should go to [README_JA.md](./README_JA.md)
+
+<div align="right">
+  Author: sum1n_o
+</div>
+
 ## Assumption
 We are using **[Node.js 18.17.0](https://nodejs.org/en/blog/release/v18.17.0)**
 
