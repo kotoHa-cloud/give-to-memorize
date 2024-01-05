@@ -12,7 +12,7 @@ client.once(Events.ClientReady, () => {
     status();
 });
 
-async function status() {
+function status() {
     client.user.setActivity({
         name: 'botは正常に起動しています！(ver:0.0.1)',
         status: 'online'
