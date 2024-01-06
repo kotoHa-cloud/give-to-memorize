@@ -6,6 +6,10 @@
   Author: sum1n_o
 </div>
 
+## Join Discord Server and Use the bot.
+[Join our Discord Server!!](https://discord.gg/WdDX4qJRr9)
+> You should publish in the issue if you cannot join the discord server for reasons such as broken link sessions, etc.
+
 ## Assumption
 We are using **[Node.js 18.17.0](https://nodejs.org/en/blog/release/v18.17.0)**
 
