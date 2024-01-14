@@ -9,8 +9,9 @@
 ## Discordサーバーに参加し、botを使用する
 [Join our Discord Server!!](https://discord.gg/WdDX4qJRr9)
 > もしあなたがdiscordサーバーにリンク切れなどの理由で参加できない場合はissueに問題を掲載してください。
-## Assumption
-**[Node.js 18.17.0](https://nodejs.org/en/blog/release/v18.17.0)**を使用しています。
+
+## 前提
+[**Node.js 18.17.0**](https://nodejs.org/en/blog/release/v18.17.0)を使用しています。
 
 ## 使用しているパッケージ
 > このプログラムは以下のnodeモジュールを使用しています。
