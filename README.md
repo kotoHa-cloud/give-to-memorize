@@ -44,5 +44,5 @@ npm install SQLite
 **We do not use yarn, so please find out how to install with yarn on your own.**
 
 ## License
-> **UNLICENSED**
-　**Although unlicensed, we do not waive any copyrights or other rights.**
+> **UNLICENSED** <br>
+**Although unlicensed, we do not waive any copyrights or other rights.**
