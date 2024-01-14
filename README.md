@@ -7,7 +7,7 @@
 </div>
 
 ## Join Discord Guild and Try to use the bot.
-[Join our Discord Server!!](https://discord.gg/WdDX4qJRr9)
+[Join our Discord Guild!!](https://discord.gg/WdDX4qJRr9)
 > You should publish in the issue if you cannot join the discord server for reasons such as broken link sessions, etc.
 
 ## Assumption
