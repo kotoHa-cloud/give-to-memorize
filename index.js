@@ -1,4 +1,6 @@
 const { Client, GatewayIntentBits, Events } = require('discord.js');
+const fs = require('fs');
+const path = require('path');
 const { token } = require('./config.json');
 
 const client = new Client({
@@ -19,4 +21,11 @@ function status() {
     });
 };
 
+const commandsDirectory = path.join(__dirname, 'src', 'commands');
+const commandFiles = fs.readdirSync(commandsDirectory).filter(file => file.endsWith('.js'));
+
+for (const file of commandFiles) {
+    const command = require(path.join(commandsDirectory, file));
+    command(client);
+}
 client.login(token);
