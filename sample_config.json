@@ -1,0 +1,16 @@
+{
+    "token": "your-token-here",
+    "clientID": "your-clientID-here",
+    "guildID": "your-guildID-here",
+    "news_channel": "your-channelID-here",
+    "category": {
+        "memorization_category": "your-categoryID-here"
+    },
+    "memorization_channel": {
+        "japanese": "your-channelID-here",
+        "math": "your-channelID-here",
+        "english": "your-channelID-here",
+        "science": "your-channelID-here",
+        "social_study": "your-channelID-here"
+    }
+}
