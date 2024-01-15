@@ -31,7 +31,9 @@
 <details>
     <summary>botの利用方法</summary>
         <div>
-            Hello world
+            ①勉強したい教科のチャンネルを開き、botが送信しているembedを押す。</br>
+            ②embedを押すと、その教科の下にプライベートチャンネルが生成されるので開きます。</br>
+            ③問題が送信されているので問題を解き続けます。
         </div>
 </details>
 
