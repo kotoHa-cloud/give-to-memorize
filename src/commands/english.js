@@ -1,5 +1,6 @@
 const { Client, Events, GatewayIntentBits, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, ChannelType } = require('discord.js');
 const { token, memorization_channel, guildreader } = require('../../config.json');
+const { EMPTY } = require('sqlite3');
 const sqlite3 = require('sqlite3').verbose();
 const EnglishChannelID = memorization_channel.english;
 
@@ -10,6 +11,8 @@ const client = new Client({
         GatewayIntentBits.GuildMembers
     ]
 });
+
+let EnglishThreads;
 
 module.exports = function English() {
     client.once(Events.ClientReady, () => {
@@ -56,11 +59,10 @@ module.exports = function English() {
 
             if (channel) {
                 try {
-                    await channel.threads.create({
+                    const EnglishThreads = await channel.threads.create({
                         name: `${nickname}さん`,
                         autoArchiveDuration: 60,
                         type: ChannelType.Guild,
-                        reason: 'なにこれ',
                         parent: interaction.channel.parent
                     });
 
@@ -69,6 +71,20 @@ module.exports = function English() {
                         ephemeral: true
                     });
 
+                    const ThreadEmbed = new EmbedBuilder()
+                        .setTitle(`ようこそ。${nickname}さん。`)
+                        .setDescription('ステータス: 学習中')
+                        .setColor('Grey')
+                        .setFields(
+                            {
+                                name: '注意事項',
+                                value: '問題はボタンを押すと送信されます。\n問題は完全にランダムです。1時間後に自動的に削除されます。'
+                            }
+                        );
+                    
+                    await EnglishThreads.send({
+                        embeds: [ThreadEmbed]
+                    });
                 } catch (error) {
                     interaction.reply({
                         content: `エラーが発生したようです。\n再度作成してください。何度もエラーが発生する場合<@${guildreader}>に問い合わせてください。`,
@@ -80,6 +96,7 @@ module.exports = function English() {
             };
         };
     });
+
 };
 
 client.login(token);
