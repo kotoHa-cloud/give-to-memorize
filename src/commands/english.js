@@ -18,7 +18,7 @@ module.exports = function English() {
         const targetEmbedChannel = client.channels.cache.get(EnglishChannelID);
         //console.log(targetEmbedChannel);
 
-        // create Embed
+        // embedを作成
         const EnglishEmbed = new EmbedBuilder()
             .setTitle('英単語学習を始める！')
             .setColor('Purple')
@@ -28,17 +28,17 @@ module.exports = function English() {
                 }
             );
 
-        // create Button
+        // ボタンを作成
         const EnglishButton = new ButtonBuilder()
                 .setCustomId('EnglishButton')
                 .setLabel('start!')
                 .setStyle(ButtonStyle.Primary)
 
-        // create ActionRow
+        // コンポーネントを作成
         const EnglishRow = new ActionRowBuilder()
             .addComponents(EnglishButton);
         
-        // sending embed and components
+        // embedとコンポーネントを送信
         if (targetEmbedChannel) {
             targetEmbedChannel.send({
                 embeds: [EnglishEmbed],
@@ -61,18 +61,20 @@ module.exports = function English() {
                     const EnglishThreads = await channel.threads.create({
                         name: `${nickname}さん`,
                         autoArchiveDuration: 60,
-                        type: ChannelType.Guild,
+                        type: ChannelType.PrivateThread,
                         parent: interaction.channel.parent
                     });
 
                     interaction.reply({
-                        content: 'チャンネルを作成しました。',
+                        content: 'プライベートスレッドを作成しました。',
                         ephemeral: true
                     });
 
+                    const userId = interaction.user.id;
+
                     const ThreadEmbed = new EmbedBuilder()
                         .setTitle(`ようこそ。${nickname}さん。`)
-                        .setDescription('ステータス: 学習中')
+                        .setDescription(`<@${userId}>ステータス: 学習中`)
                         .setColor('Grey')
                         .setFields(
                             {
